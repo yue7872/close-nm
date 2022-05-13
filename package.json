@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "close-nm",
   "displayName": "close-nm",
   "version": "0.0.0",
   "publisher": "blairyue",
@@ -30,6 +30,27 @@
   "activationEvents": [
     "*"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "title": "✨",
+        "command": "close.node_modules"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "close.node_modules"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "close.node_modules",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
   "icon": "res/icon.png",
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
